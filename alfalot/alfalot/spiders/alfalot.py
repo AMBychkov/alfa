@@ -275,8 +275,7 @@ class AlfaSpider(scrapy.Spider):
     name = "alfalot"
 
     def start_requests(self):
-        urls = ['https://bankrupt.alfalot.ru/public/public-offers/lots/view/155099/',
-                'https://bankrupt.alfalot.ru/public/auctions/lots/view/155132/']
+        urls = []
         for item in nev:
             urls.append(item)
         for url in urls:

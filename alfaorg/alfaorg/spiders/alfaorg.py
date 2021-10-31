@@ -268,17 +268,16 @@ def rosreestr(numbers):
     return cad_data, cad_data1, osm_dict
 
 
-# nev = grab_links_for_start()
+nev = grab_links_for_start()
 
 
 class AlfaSpider(scrapy.Spider):
     name = "alfaorg"
 
     def start_requests(self):
-        urls = ['https://bankrupt.alfalot.ru/public/public-offers/view/46538/',
-                'https://bankrupt.alfalot.ru/public/auctions/view/46505/']
-        # for item in nev:
-        #     urls.append(item)
+        urls = []
+        for item in nev:
+            urls.append([item])
         for url in urls:
             yield scrapy.Request(url)
 
