@@ -277,7 +277,7 @@ class AlfaSpider(scrapy.Spider):
     def start_requests(self):
         urls = []
         for item in nev:
-            urls.append([item])
+            urls.append(nev[item])
         for url in urls:
             yield scrapy.Request(url)
 
